@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Single Uranium -->
+
+
+  <RecipeDef>
+    <defName>Make_RefinedUranium</defName>
+    <label>refine uranium</label>
+    <description>Refine uranium.</description>
+    <jobString>Refining uranium.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+	<researchPrerequisite>UraniumProcessing</researchPrerequisite>
+    <soundWorking>Recipe_Cremate</soundWorking>
+    <workAmount>1500</workAmount>
+    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Silver</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+		<li>Uranium</li>
+		<li>Silver</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <RefinedUranium>1</RefinedUranium>
+    </products>
+    <skillRequirements>
+      <Intellectual>8</Intellectual>
+	  <Crafting>5</Crafting>
+    </skillRequirements>
+    <workSkill>Intellectual</workSkill>
+  </RecipeDef>
+  
+  
+  <!-- Bulk Uranium -->
+  
+  
+    <RecipeDef>
+    <defName>Make_BulkRefinedUranium</defName>
+    <label>refine 4 uranium</label>
+    <description>Refine uranium in bulk.</description>
+    <jobString>Refining uranium in bulk.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+	<researchPrerequisite>UraniumProcessing</researchPrerequisite>
+    <soundWorking>Recipe_Cremate</soundWorking>
+    <workAmount>5000</workAmount>
+    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>80</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>100</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Silver</li>
+          </thingDefs>
+        </filter>
+        <count>16</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+		<li>Uranium</li>
+		<li>Silver</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <RefinedUranium>4</RefinedUranium>
+    </products>
+    <skillRequirements>
+      <Intellectual>8</Intellectual>
+	  <Crafting>5</Crafting>
+    </skillRequirements>
+    <workSkill>Intellectual</workSkill>
+  </RecipeDef>
+
+
+
+  <!-- Cooling Components -->
+  
+      <RecipeDef>
+    <defName>Make_CoolingComponents</defName>
+    <label>make cooling components</label>
+    <description>Make cooling components.</description>
+    <jobString>Making cooling components.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+	<researchPrerequisite>CoolingSys</researchPrerequisite>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <workAmount>250</workAmount>
+    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Silver</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  	  <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+		<li>Gold</li>
+		<li>Silver</li>
+		<li>Plasteel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <CoolingComp>1</CoolingComp>
+    </products>
+    <skillRequirements>
+	  <Crafting>4</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+	<recipeUsers>
+		<li>FabricationBench</li>
+	</recipeUsers>
+  </RecipeDef>
+  
+  
+    <!-- Bulk Cooling Components -->
+  
+      <RecipeDef>
+    <defName>Make_BulkCoolingComponents</defName>
+    <label>make 5 cooling components</label>
+    <description>Make cooling components in bulk.</description>
+    <jobString>Making cooling components in bulk.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+	<researchPrerequisite>CoolingSys</researchPrerequisite>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <workAmount>900</workAmount>
+    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>75</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Silver</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+	  	  <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+		<li>Gold</li>
+		<li>Silver</li>
+		<li>Plasteel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <CoolingComp>5</CoolingComp>
+    </products>
+    <skillRequirements>
+	  <Crafting>4</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+	<recipeUsers>
+		<li>FabricationBench</li>
+	</recipeUsers>
+  </RecipeDef>
+  
+  
+    <!-- Liquid Injector -->
+  
+      <RecipeDef>
+    <defName>Make_CoolingInjector</defName>
+    <label>make liquid injector</label>
+    <description>Make liquid injector.</description>
+    <jobString>Making liquid injector.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+	<researchPrerequisite>CoolingSys</researchPrerequisite>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <workAmount>5500</workAmount>
+    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>CoolingComp</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Silver</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+		<li>CoolingComp</li>
+		<li>Silver</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <CoolingInjector>1</CoolingInjector>
+    </products>
+    <skillRequirements>
+	  <Crafting>4</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+	<recipeUsers>
+		<li>TableMachining</li>
+	</recipeUsers>
+  </RecipeDef>
+  
+  
+      <!-- Liquid Tank -->
+  
+      <RecipeDef>
+    <defName>Make_CoolingTank</defName>
+    <label>make liquid tank</label>
+    <description>Make liquid tank.</description>
+    <jobString>Making liquid tank.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+	<researchPrerequisite>CoolingSys</researchPrerequisite>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <workAmount>5500</workAmount>
+    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>30</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>CoolingComp</li>
+          </thingDefs>
+        </filter>
+        <count>8</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Silver</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+		<li>CoolingComp</li>
+		<li>Silver</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <CoolingTank>1</CoolingTank>
+    </products>
+    <skillRequirements>
+	  <Crafting>4</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+	<recipeUsers>
+		<li>TableMachining</li>
+	</recipeUsers>
+  </RecipeDef>
+  
+  
+  
+        <!-- Cooling AI -->
+  
+      <RecipeDef>
+    <defName>Make_CoolingAI</defName>
+    <label>make cooling AI</label>
+    <description>Make cooling AI.</description>
+    <jobString>Making cooling AI.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+	<researchPrerequisite>CoolingSys</researchPrerequisite>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <workAmount>8000</workAmount>
+    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>70</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>CoolingComp</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Silver</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+	  	  <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+		<li>CoolingComp</li>
+		<li>Silver</li>
+		<li>Plasteel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <CoolingAI>1</CoolingAI>
+    </products>
+    <skillRequirements>
+	  <Crafting>7</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+	<recipeUsers>
+		<li>TableMachining</li>
+	</recipeUsers>
+  </RecipeDef>
+  
+  
+    
+        <!-- Cooling Systems -->
+  
+      <RecipeDef>
+    <defName>Make_CoolingSys</defName>
+    <label>make cooling systems</label>
+    <description>Make cooling systems.</description>
+    <jobString>Making cooling systems.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+	<researchPrerequisite>CoolingSys</researchPrerequisite>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <workAmount>22000</workAmount>
+    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>100</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>CoolingComp</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Silver</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+	  	  <li>
+        <filter>
+          <thingDefs>
+            <li>CoolingAI</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  	  <li>
+        <filter>
+          <thingDefs>
+            <li>CoolingInjector</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  	  <li>
+        <filter>
+          <thingDefs>
+            <li>CoolingTank</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  	  <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+		<li>CoolingComp</li>
+		<li>Silver</li>
+		<li>CoolingAI</li>
+		<li>CoolingInjector</li>
+		<li>CoolingTank</li>
+		<li>Plasteel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <CoolingSys>1</CoolingSys>
+    </products>
+    <skillRequirements>
+	  <Crafting>10</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+	<recipeUsers>
+		<li>TableMachining</li>
+	</recipeUsers>
+  </RecipeDef>
+  
+          <!-- Small Cooling Systems -->
+  
+      <RecipeDef>
+    <defName>Make_SmallCoolingSys</defName>
+    <label>make small cooling systems</label>
+    <description>Make small cooling systems.</description>
+    <jobString>Making small cooling systems.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+	<researchPrerequisite>CoolingSys</researchPrerequisite>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <workAmount>11000</workAmount>
+    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>70</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>CoolingComp</li>
+          </thingDefs>
+        </filter>
+        <count>8</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Silver</li>
+          </thingDefs>
+        </filter>
+        <count>8</count>
+      </li>
+	  	  <li>
+        <filter>
+          <thingDefs>
+            <li>CoolingInjector</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  	  <li>
+        <filter>
+          <thingDefs>
+            <li>CoolingTank</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  	  <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+		<li>CoolingComp</li>
+		<li>Silver</li>
+		<li>CoolingInjector</li>
+		<li>CoolingTank</li>
+		<li>Plasteel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SmallCoolingSys>1</SmallCoolingSys>
+    </products>
+    <skillRequirements>
+	  <Crafting>8</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+	<recipeUsers>
+		<li>TableMachining</li>
+	</recipeUsers>
+  </RecipeDef>
+  
+</Defs>

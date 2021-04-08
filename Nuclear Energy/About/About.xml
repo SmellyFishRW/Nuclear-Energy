@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Nuclear Energy</name>
+	<author>Smelly Fish</author>
+    <supportedVersions>
+      <li>1.0</li>
+      <li>1.1</li>
+	  <li>1.2</li>
+    </supportedVersions>
+    <packageId>sfish.nuclearenergy</packageId>
+	<description>
+    Adds more uses to uranium. Process it and make a reactor to produce MASSIVE amounts of energy!
+	</description>
+</ModMetaData>

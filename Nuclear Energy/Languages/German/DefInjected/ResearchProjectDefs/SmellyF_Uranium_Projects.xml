@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <UraniumProcessing.label>Uranraffinierung</UraniumProcessing.label>
+  <UraniumProcessing.description>Erforschen den Prozess der Raffination von Uran um Ihn in seine reinsten Form zu verarbeiten. Verarbeite Uran in einer Biokraftstoff Raffinerie. Dies ist der erste Schritt zur Erzeugung von Kernenergie.</UraniumProcessing.description>
+  
+  <CoolingSys.label>Kühlsysteme</CoolingSys.label>
+  <CoolingSys.description>Erstellen Sie fortschrittliche Kühlsysteme, um eine Überhitzung des Reaktors zu verhindern. Die Komponenten werden auf einer Mechanik Werkbank hergestellt, der Rest auf einem Arbeitstisch.</CoolingSys.description>
+  
+  <SmallNuclearReactor.label>Kleiner Kernreaktor</SmallNuclearReactor.label>
+  <SmallNuclearReactor.description>Lerne wie du mit raffiniertem Uran eine gute Energiequelle herstellen.</SmallNuclearReactor.description>
+  
+  <NuclearReactor.label>Kernreaktor</NuclearReactor.label>
+  <NuclearReactor.description>Lerne wie du mit raffiniertem Uran eine große Menge Energie herstellen kannst.</NuclearReactor.description>
+
+  <GiantNuclearReactor.label>Giganitischer Kernreaktor</GiantNuclearReactor.label>
+  <GiantNuclearReactor.description>Lerne wie du mit raffiniertem Uran eine extrem leistungsstarke Energiequelle herstellen kannst.</GiantNuclearReactor.description>
+
+  <ContWall.label>Sicherheitsmauern und Türen</ContWall.label>
+  <ContWall.description>Ermöglicht den Bau von starken Mauern und einer Türen zum Bau einer Sicherheitskammer für Reaktoren. Kann eine normale Reaktorexplosion stoppen</ContWall.description>
+  
+  <StrContWall.label>Starke Sicherheitsmauern und Türen</StrContWall.label>
+  <StrContWall.description>Ermöglicht den Bau einevon stärkeren Mauern und Türen zum Bau einer Sicherheitskammer für Reaktoren. Kann eine riesige Reaktorexplosion stoppen</StrContWall.description>
+  
+</LanguageData>
