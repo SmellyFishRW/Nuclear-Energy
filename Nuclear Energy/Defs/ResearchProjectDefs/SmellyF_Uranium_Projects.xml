@@ -3,7 +3,7 @@
   <ResearchProjectDef>
     <defName>UraniumProcessing</defName>
     <label>uranium refining</label>
-    <description>Research the process of refining uranium to its purest form. Process it in a biofuel refinery. It's the first step to creating uranium energy.</description>
+    <description>Research the process of refining uranium to its purest form. Process it in the uranium enrichment and refining station. It's the first step to creating uranium energy.</description>
     <baseCost>2500</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
