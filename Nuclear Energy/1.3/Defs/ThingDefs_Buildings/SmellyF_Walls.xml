@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--DOOR BASE-->
+
+  <ThingDef ParentName="BuildingBase" Name="ContDoorBase" Abstract="True">
+    <thingClass>Building_Door</thingClass>
+    <category>Building</category>
+    <altitudeLayer>DoorMoveable</altitudeLayer>
+    <fillPercent>1</fillPercent>
+    <useHitPoints>true</useHitPoints>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Structure</designationCategory>
+    <holdsRoof>true</holdsRoof>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <blockLight>true</blockLight>
+    <drawerType>RealtimeOnly</drawerType>
+    <building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>Things/Building/Door/Door_Blueprint</texPath>
+      </blueprintGraphicData>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+		<placeWorkers>
+			<li>PlaceWorker_DoorLearnOpeningSpeed</li>
+		</placeWorkers>
+  </ThingDef>
+
+
+
+
+
+
+<!--WEAKER DOORS-->
+
+
+  <ThingDef ParentName="ContDoorBase">
+    <defName>ConDoor</defName>
+    <label>containment door</label>
+    <description>Divides rooms. Simple doors must be manually opened, which slows people down. This door can withstand a normal reactor explosion.</description>
+    <statBases>
+      <WorkToBuild>2000</WorkToBuild>
+	  <MaxHitPoints>1200</MaxHitPoints>
+	  <Flammability>0</Flammability>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Building/Door/DoorSimple_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <color>(85,85,85)</color>
+      <damageData>
+        <!--  no damage marks because they don't move with the door
+        <rect>(0,0.12,1,0.76)</rect>-->
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Door/DoorSimple_MenuIcon</uiIconPath>
+    <costList>
+      <Steel>125</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+	  <Plasteel>15</Plasteel>
+    </costList>
+    <designationHotKey>Misc1</designationHotKey>
+	<researchPrerequisites>
+      <li>ContWall</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+  <ThingDef ParentName="ContDoorBase">
+    <defName>ContAutodoor</defName>
+    <label>containment autodoor</label>
+    <description>Divides rooms. Powered operation allows people to move through the door without slowing down. This door (although weaker than the manual one) can withstand a normal reactor explosion.</description>
+    <statBases>
+      <WorkToBuild>2600</WorkToBuild>
+	  <MaxHitPoints>1000</MaxHitPoints>
+	  <Flammability>0</Flammability>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Building/Door/Autodoor_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <color>(85,85,85)</color>
+      <damageData>
+      <!--  no damage marks because they don't move with the door
+        <rect>(0,0.12,1,0.76)</rect>-->
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Door/Autodoor_MenuIcon</uiIconPath>
+	<costList>
+      <Steel>175</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+	  <Plasteel>25</Plasteel>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>50</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <designationHotKey>Misc2</designationHotKey>
+    <researchPrerequisites>
+      <li>Autodoors</li>
+	  <li>ContWall</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+  </ThingDef>
+  
+  <!--STRONGER DOORS-->
+  
+  
+  
+    <ThingDef ParentName="ContDoorBase">
+    <defName>StrConDoor</defName>
+    <label>strong containment door</label>
+    <description>Divides rooms. Simple doors must be manually opened, which slows people down. This door can withstand a giant reactor explosion.</description>
+    <statBases>
+      <WorkToBuild>4000</WorkToBuild>
+	  <MaxHitPoints>2500</MaxHitPoints>
+	  <Flammability>0</Flammability>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Building/Door/DoorSimple_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <color>(45,45,85)</color>
+      <damageData>
+        <!--  no damage marks because they don't move with the door
+        <rect>(0,0.12,1,0.76)</rect>-->
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Door/DoorSimple_MenuIcon</uiIconPath>
+    <costList>
+      <Steel>300</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+	  <Plasteel>30</Plasteel>
+	  <Silver>50</Silver>
+    </costList>
+    <designationHotKey>Misc1</designationHotKey>
+	<researchPrerequisites>
+      <li>StrContWall</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+  <ThingDef ParentName="ContDoorBase">
+    <defName>StrContAutodoor</defName>
+    <label>strong containment autodoor</label>
+    <description>Divides rooms. Powered operation allows people to move through the door without slowing down. This door (although weaker than the manual one) can withstand a giant reactor explosion.</description>
+    <statBases>
+      <WorkToBuild>5000</WorkToBuild>
+	  <MaxHitPoints>2200</MaxHitPoints>
+	  <Flammability>0</Flammability>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Building/Door/Autodoor_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <color>(45,45,85)</color>
+      <damageData>
+      <!--  no damage marks because they don't move with the door
+        <rect>(0,0.12,1,0.76)</rect>-->
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Door/Autodoor_MenuIcon</uiIconPath>
+	<costList>
+       <Steel>400</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+	  <Plasteel>45</Plasteel>
+	  <Silver>65</Silver>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>50</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <designationHotKey>Misc2</designationHotKey>
+    <researchPrerequisites>
+      <li>Autodoors</li>
+	  <li>StrContWall</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+  </ThingDef>
+  
+  
+  <!--WEAKER WALLS-->
+  
+    <ThingDef ParentName="BuildingBase" Name="ContainWall">
+    <defName>ContainWall</defName>
+    <label>containment wall</label>
+    <description>An impassable wall. Capable of holding up a roof and withstanding a normal reactor explosion. Used for containing reactors in a chamber.</description>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <graphicData>
+	  <color>(85,85,85)</color>
+      <texPath>Things/Building/Linked/Wall</texPath>
+      <graphicClass>Graphic_Appearances</graphicClass>
+      <linkType>CornerFiller</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+        <edgeTop>Damage/Edge</edgeTop>
+        <edgeBot>Damage/Edge</edgeBot>
+        <edgeLeft>Damage/Edge</edgeLeft>
+        <edgeRight>Damage/Edge</edgeRight>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
+    <statBases>
+      <MaxHitPoints>1300</MaxHitPoints>
+      <WorkToBuild>1250</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    <costList>
+      <Steel>20</Steel>
+	  <Plasteel>2</Plasteel>
+	  <Silver>2</Silver>
+    </costList>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <coversFloor>true</coversFloor>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <tickerType>Never</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <holdsRoof>true</holdsRoof>
+    <designationCategory>Structure</designationCategory>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <blockLight>true</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <building>
+      <isInert>true</isInert>
+      <ai_chillDestination>false</ai_chillDestination>
+      <blueprintGraphicData>
+        <texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+      </blueprintGraphicData>
+    </building>
+    <designationHotKey>Misc3</designationHotKey>
+	<researchPrerequisites>
+      <li>ContWall</li>
+    </researchPrerequisites>
+  </ThingDef>
+  
+  <!--STRONGER WALLS-->
+  
+      <ThingDef ParentName="BuildingBase" Name="StrContainWall">
+    <defName>StrContainWall</defName>
+    <label>strong containment wall</label>
+    <description>An impassable wall. Capable of holding up a roof and withstanding a giant reactor explosion. Used for containing reactors in a chamber.</description>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <graphicData>
+	  <color>(45,45,85)</color>
+      <texPath>Things/Building/Linked/Wall</texPath>
+      <graphicClass>Graphic_Appearances</graphicClass>
+      <linkType>CornerFiller</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+        <edgeTop>Damage/Edge</edgeTop>
+        <edgeBot>Damage/Edge</edgeBot>
+        <edgeLeft>Damage/Edge</edgeLeft>
+        <edgeRight>Damage/Edge</edgeRight>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
+    <statBases>
+      <MaxHitPoints>2800</MaxHitPoints>
+      <WorkToBuild>2500</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    <costList>
+      <Steel>40</Steel>
+	  <Plasteel>5</Plasteel>
+	  <Silver>5</Silver>
+    </costList>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <coversFloor>true</coversFloor>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <tickerType>Never</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <holdsRoof>true</holdsRoof>
+    <designationCategory>Structure</designationCategory>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <blockLight>true</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <building>
+      <isInert>true</isInert>
+      <ai_chillDestination>false</ai_chillDestination>
+      <blueprintGraphicData>
+        <texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+      </blueprintGraphicData>
+    </building>
+    <designationHotKey>Misc3</designationHotKey>
+	<researchPrerequisites>
+      <li>StrContWall</li>
+    </researchPrerequisites>
+  </ThingDef>
+  
+
+</Defs>
+  
+  

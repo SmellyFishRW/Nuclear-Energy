@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--Normal Nuclear Reactor-->
+
+  <ThingDef Class="Nuclear_Energy.ReactorSettings" ParentName="BuildingBase">
+    <defName>NuclearReactor</defName>
+    <label>nuclear reactor</label>
+    <description>Produces lots of power by consuming refined uranium. Must be refueled by hand. Dangerous when it explodes.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Power/NuclearReactorOld</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(10,10)</drawSize>
+      <shadowData>
+        <volume>(1.93,1,1.69)</volume>
+        <offset>(-0.03,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <pathCost>150</pathCost>
+    <blockWind>true</blockWind>
+    <fillPercent>1.0</fillPercent>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <WorkToBuild>60000</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Beauty>-250</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <canOverlapZones>false</canOverlapZones>
+    <size>(8,8)</size>
+    <costList>
+      <Steel>700</Steel>
+      <ComponentIndustrial>15</ComponentIndustrial>
+	  <Plasteel>125</Plasteel>
+	  <CoolingSys>2</CoolingSys>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>-25500</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0.08</fuelConsumptionRate>
+        <fuelCapacity>5</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>RefinedUranium</li>
+          </thingDefs>
+        </fuelFilter>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(0, 223, 0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>10</heatPerSecond>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>12</explosiveRadius>
+        <explosiveExpandPerFuel>10</explosiveExpandPerFuel>
+        <explosiveDamageType>NuclearMedium</explosiveDamageType>
+        <destroyThingOnExplosionSize>1</destroyThingOnExplosionSize>
+        <startWickHitPointsPercent>0.100</startWickHitPointsPercent>
+        <preExplosionSpawnThingDef>Filth_Uranium</preExplosionSpawnThingDef>
+        <preExplosionSpawnChance>0.1</preExplosionSpawnChance>
+        <wickTicks>
+          <min>500</min>
+          <max>1000</max>
+        </wickTicks>
+	  </li>
+    </comps>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>Power</designationCategory>
+    <designationHotKey>Misc4</designationHotKey>
+    <constructEffect>ConstructMetal</constructEffect>
+    <researchPrerequisites>
+      <li>Electricity</li>
+	  <li>NuclearReactor</li>
+	  <li>MicroelectronicsBasics</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+  </ThingDef>
+  
+  <!--Small Nuclear Reactor-->
+  
+    <ThingDef ParentName="BuildingBase">
+    <defName>SmallNuclearReactor</defName>
+    <label>small nuclear reactor</label>
+    <description>Produces a good amount of power by consuming refined uranium. Must be refueled by hand. Could be dangerous if it explodes.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Power/NuclearReactorOld</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(5,5)</drawSize>
+      <shadowData>
+        <volume>(1.93,1,1.69)</volume>
+        <offset>(-0.03,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <pathCost>150</pathCost>
+    <blockWind>true</blockWind>
+    <fillPercent>1.0</fillPercent>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <WorkToBuild>20000</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Beauty>-100</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <canOverlapZones>false</canOverlapZones>
+    <size>(4,4)</size>
+    <costList>
+      <Steel>350</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+	  <Plasteel>50</Plasteel>
+	  <SmallCoolingSys>1</SmallCoolingSys>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>-6750</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0.03</fuelConsumptionRate>
+        <fuelCapacity>1</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>RefinedUranium</li>
+          </thingDefs>
+        </fuelFilter>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>7</glowRadius>
+        <glowColor>(0, 223, 0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>5</heatPerSecond>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>7</explosiveRadius>
+        <explosiveExpandPerFuel>5</explosiveExpandPerFuel>
+        <explosiveDamageType>NuclearSmall</explosiveDamageType>
+        <destroyThingOnExplosionSize>1</destroyThingOnExplosionSize>
+        <startWickHitPointsPercent>0.1</startWickHitPointsPercent>
+        <preExplosionSpawnThingDef>Filth_Uranium</preExplosionSpawnThingDef>
+        <preExplosionSpawnChance>0.08</preExplosionSpawnChance>
+        <wickTicks>
+          <min>250</min>
+          <max>600</max>
+        </wickTicks>
+	  </li>
+    </comps>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>Power</designationCategory>
+    <designationHotKey>Misc4</designationHotKey>
+    <constructEffect>ConstructMetal</constructEffect>
+    <researchPrerequisites>
+      <li>Electricity</li>
+	  <li>SmallNuclearReactor</li>
+	  <li>MicroelectronicsBasics</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+  </ThingDef>
+  
+  
+  
+	<!--GIANT Nuclear Reactor-->
+  
+    <ThingDef ParentName="BuildingBase">
+    <defName>GiantNuclearReactor</defName>
+    <label>giant nuclear reactor</label>
+    <description>Produces TONS of power by consuming refined uranium. Must be refueled by hand. Very dangerous if it explodes.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Power/NuclearReactorOld</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(15,15)</drawSize>
+      <shadowData>
+        <volume>(1.93,1,1.69)</volume>
+        <offset>(-0.03,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <pathCost>150</pathCost>
+    <blockWind>true</blockWind>
+    <fillPercent>1.0</fillPercent>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>5000</MaxHitPoints>
+      <WorkToBuild>120000</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Beauty>-800</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <canOverlapZones>false</canOverlapZones>
+    <size>(12,12)</size>
+    <costList>
+      <Steel>1000</Steel>
+      <ComponentIndustrial>25</ComponentIndustrial>
+	  <Plasteel>200</Plasteel>
+	  <CoolingSys>5</CoolingSys>
+	  <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>-50000</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0.12</fuelConsumptionRate>
+        <fuelCapacity>15</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>RefinedUranium</li>
+          </thingDefs>
+        </fuelFilter>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>26</glowRadius>
+        <glowColor>(0, 223, 0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>50</heatPerSecond>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>25</explosiveRadius>
+        <explosiveExpandPerFuel>25</explosiveExpandPerFuel>
+        <explosiveDamageType>NuclearGiant</explosiveDamageType>
+        <destroyThingOnExplosionSize>5</destroyThingOnExplosionSize>
+        <startWickHitPointsPercent>0.100</startWickHitPointsPercent>
+        <preExplosionSpawnThingDef>Filth_Uranium</preExplosionSpawnThingDef>
+        <preExplosionSpawnChance>0.06</preExplosionSpawnChance>
+        <wickTicks>
+          <min>1500</min>
+          <max>2000</max>
+        </wickTicks>
+	  </li>
+    </comps>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>Power</designationCategory>
+    <designationHotKey>Misc4</designationHotKey>
+    <constructEffect>ConstructMetal</constructEffect>
+    <researchPrerequisites>
+      <li>Electricity</li>
+	  <li>GiantNuclearReactor</li>
+	  <li>MicroelectronicsBasics</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+  </ThingDef>
+</Defs>
