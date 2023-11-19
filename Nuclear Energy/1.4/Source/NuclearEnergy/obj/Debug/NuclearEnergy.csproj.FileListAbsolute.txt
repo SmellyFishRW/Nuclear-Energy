@@ -1,0 +1,4 @@
+G:\Program Files\Steam\steamapps\common\RimWorld\Mods\Nuclear Energy\1.4\Assemblies\NuclearEnergy.dll
+G:\Program Files\Steam\steamapps\common\RimWorld\Mods\Nuclear Energy\1.4\Source\NuclearEnergy\obj\Debug\NuclearEnergy.csprojAssemblyReference.cache
+G:\Program Files\Steam\steamapps\common\RimWorld\Mods\Nuclear Energy\1.4\Source\NuclearEnergy\obj\Debug\NuclearEnergy.csproj.CoreCompileInputs.cache
+G:\Program Files\Steam\steamapps\common\RimWorld\Mods\Nuclear Energy\1.4\Source\NuclearEnergy\obj\Debug\NuclearEnergy.dll

@@ -40,7 +40,7 @@
     </costList>
     <comps>
       <li Class="CompProperties_Power">
-        <compClass>CompPowerPlant</compClass>
+        <compClass>NuclearEnergy.NuclearCompPowerPlant</compClass>
         <basePowerConsumption>-25500</basePowerConsumption>
         <transmitsPower>true</transmitsPower>
       </li>
@@ -128,7 +128,7 @@
     </costList>
     <comps>
       <li Class="CompProperties_Power">
-        <compClass>CompPowerPlant</compClass>
+        <compClass>NuclearEnergy.NuclearCompPowerPlant</compClass>
         <basePowerConsumption>-6750</basePowerConsumption>
         <transmitsPower>true</transmitsPower>
       </li>
@@ -219,7 +219,7 @@
     </costList>
     <comps>
       <li Class="CompProperties_Power">
-        <compClass>CompPowerPlant</compClass>
+        <compClass>NuclearEnergy.NuclearCompPowerPlant</compClass>
         <basePowerConsumption>-50000</basePowerConsumption>
         <transmitsPower>true</transmitsPower>
       </li>
