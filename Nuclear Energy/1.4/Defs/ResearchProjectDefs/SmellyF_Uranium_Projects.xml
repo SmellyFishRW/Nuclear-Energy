@@ -14,7 +14,7 @@
     <researchViewY>3</researchViewY>
 	<tab>UraniumPower</tab>
   </ResearchProjectDef>
-  
+
   <ResearchProjectDef>
     <defName>CoolingSys</defName>
     <label>Cooling Systems</label>

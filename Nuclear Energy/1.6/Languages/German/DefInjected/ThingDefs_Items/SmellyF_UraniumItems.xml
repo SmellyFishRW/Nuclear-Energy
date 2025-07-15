@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <RefinedUranium.label>Raffiniertes Uran</RefinedUranium.label>
+  <RefinedUranium.description>Raffiniertes Uran zur erzeugung von Enerie.</RefinedUranium.description>
+
+  <CoolingComp.label>Kühlsystemkomponente</CoolingComp.label>
+  <CoolingComp.description>Ein Bündel von Komponenten. Wird verwendet, um ein fortschrittliches Kühlsystem für Reaktoren zu erstellen.</CoolingComp.description>
+  
+  <CoolingInjector.label>Flüssigkeitsinjektor</CoolingInjector.label>
+  <CoolingInjector.description>Injiziert Flüssigkeit in den Kühltank, um den Reaktor zu kühlen. Einer von vielen Teilen des Kühlsystems.</CoolingInjector.description>
+  
+  <CoolingTank.label>Flüssigkeitstank</CoolingTank.label>
+  <CoolingTank.description>Speichert Flüssigkeit, die den Reaktor abkühlt. Einer von vielen Teilen des Kühlsystems.</CoolingTank.description>
+  
+  <CoolingAI.label>Kühlungs-KI</CoolingAI.label>
+  <CoolingAI.description>Die erweiterte Kühl-KI erkennt, wann der Reaktor abgekühlt werden muss. Einer von vielen Teilen des Kühlsystems.</CoolingAI.description>
+  
+  <CoolingSys.label>Kühlsystem</CoolingSys.label>
+  <CoolingSys.description>Die fortschrittlichsten Kühlsysteme. Es besteht aus einem Flüssigkeitstank, einem Flüssigkeitsinjektor und einer KI.</CoolingSys.description>
+  
+  <SmallCoolingSys.label>Kleines Kühlsystem</SmallCoolingSys.label>
+  <SmallCoolingSys.description>ine kleiner Version des Kühlsystems. Es besteht aus einem Flüssigkeitstank und einem Flüssigkeitsinjektor.</SmallCoolingSys.description>
+</LanguageData>

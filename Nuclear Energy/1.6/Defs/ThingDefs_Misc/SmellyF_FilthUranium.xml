@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BaseFilth">
+    <defName>Filth_Uranium</defName>
+    <label>uranium</label>
+    <statBases>
+      <Beauty>-80</Beauty>
+      <Cleanliness>-35</Cleanliness>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Filth/PoolSoft</texPath>
+      <color>(17, 170, 6)</color>
+    </graphicData>
+    <filth>
+      <rainWashes>false</rainWashes>
+      <cleaningWorkToReduceThickness>300</cleaningWorkToReduceThickness>
+      <canFilthAttach>true</canFilthAttach>
+    </filth>
+  </ThingDef>
+  </Defs>

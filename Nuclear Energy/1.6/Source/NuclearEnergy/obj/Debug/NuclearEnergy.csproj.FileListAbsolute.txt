@@ -1,0 +1,9 @@
+G:\Program Files\Steam\steamapps\common\RimWorld\Mods\Nuclear Energy\1.4\Assemblies\NuclearEnergy.dll
+G:\Program Files\Steam\steamapps\common\RimWorld\Mods\Nuclear Energy\1.4\Source\NuclearEnergy\obj\Debug\NuclearEnergy.csprojAssemblyReference.cache
+G:\Program Files\Steam\steamapps\common\RimWorld\Mods\Nuclear Energy\1.4\Source\NuclearEnergy\obj\Debug\NuclearEnergy.csproj.CoreCompileInputs.cache
+G:\Program Files\Steam\steamapps\common\RimWorld\Mods\Nuclear Energy\1.4\Source\NuclearEnergy\obj\Debug\NuclearEnergy.dll
+G:\Program Files\Steam\steamapps\common\RimWorld\Mods\Nuclear Energy\1.6\Assemblies\NuclearEnergy.dll
+G:\Program Files\Steam\steamapps\common\RimWorld\Mods\Nuclear Energy\1.6\Source\NuclearEnergy\obj\Debug\NuclearEnergy.csproj.AssemblyReference.cache
+G:\Program Files\Steam\steamapps\common\RimWorld\Mods\Nuclear Energy\1.6\Source\NuclearEnergy\obj\Debug\NuclearEnergy.csproj.CoreCompileInputs.cache
+G:\Program Files\Steam\steamapps\common\RimWorld\Mods\Nuclear Energy\1.6\Source\NuclearEnergy\obj\Debug\NuclearEnergy.dll
+G:\Program Files\Steam\steamapps\common\RimWorld\Mods\Nuclear Energy\1.6\Source\NuclearEnergy\obj\Debug\NuclearE.0EB950F3.Up2Date

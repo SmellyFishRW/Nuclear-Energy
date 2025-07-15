@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <NuclearReactor.label>Kernreaktor</NuclearReactor.label>
+  <NuclearReactor.description>Produziert viel Strom durch den Verbrauch von raffiniertem Uran. Muss von Hand betankt werden. Gefährlich, wenn es explodiert.</NuclearReactor.description>
+
+  <SmallNuclearReactor.label>Kleiner Kernreaktor</SmallNuclearReactor.label>
+  <SmallNuclearReactor.description>Erzeugt eine gute Menge an Energie durch den Verbrauch von raffiniertem Uran. Muss von Hand betankt werden. Könnte gefährlich sein, wenn es explodiert.</SmallNuclearReactor.description>
+  
+  <GiantNuclearReactor.label>Riesiger Kernreaktor</GiantNuclearReactor.label>
+  <GiantNuclearReactor.description>Produziert Tonnen von Energie durch den Verbrauch von raffiniertem Uran. Muss von Hand betankt werden. Sehr gefährlich, wenn es explodiert.</GiantNuclearReactor.description>
+</LanguageData>
