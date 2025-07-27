@@ -183,4 +183,21 @@ namespace NuclearEnergy
             }
         }
     }
+
+
+    // --- The Blueprint Class ---
+    public class CompProperties_Containment : CompProperties
+    {
+        public CompProperties_Containment()
+        {
+            this.compClass = typeof(CompContainment);
+        }
+    }
+
+    // --- The Live Component Class ---
+    public class CompContainment : ThingComp
+    {
+        // This component is a placeholder for the future meltdown feature.
+        // It doesn't need to do anything right now. Its only job is to exist,
+    }
 }

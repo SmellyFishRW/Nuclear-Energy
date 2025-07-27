@@ -3,7 +3,7 @@
 
 <!--DOOR BASE-->
 
-  <ThingDef ParentName="BuildingBase" Name="ContDoorBase" Abstract="True">
+<ThingDef ParentName="BuildingBase" Name="ContDoorBase" Abstract="True">
     <thingClass>Building_Door</thingClass>
     <category>Building</category>
     <altitudeLayer>DoorMoveable</altitudeLayer>
@@ -64,8 +64,8 @@
 	  <color>(85,85,85)</color>
       <damageData>
         <!--  no damage marks because they don't move with the door
-        <rect>(0,0.12,1,0.76)</rect>-->
-        <enabled>false</enabled>
+        <rect>(0,0.12,1,0.76)</rect>--> 
+      <enabled>false</enabled>
       </damageData>
     </graphicData>
     <uiIconPath>Things/Building/Door/DoorSimple_MenuIcon</uiIconPath>
@@ -74,6 +74,9 @@
       <ComponentIndustrial>1</ComponentIndustrial>
 	  <Plasteel>15</Plasteel>
     </costList>
+	<comps>
+		<li Class="NuclearEnergy.CompProperties_Containment"/>
+	</comps>
     <designationHotKey>Misc1</designationHotKey>
 	<researchPrerequisites>
       <li>ContWall</li>
@@ -96,7 +99,7 @@
       <damageData>
       <!--  no damage marks because they don't move with the door
         <rect>(0,0.12,1,0.76)</rect>-->
-        <enabled>false</enabled>
+      <enabled>false</enabled>
       </damageData>
     </graphicData>
     <uiIconPath>Things/Building/Door/Autodoor_MenuIcon</uiIconPath>
@@ -111,6 +114,8 @@
         <basePowerConsumption>50</basePowerConsumption>
       </li>
       <li Class="CompProperties_Breakdownable"/>
+	  <li Class="CompProperties_Styleable" />
+	  <li Class="NuclearEnergy.CompProperties_Containment"/>
     </comps>
     <designationHotKey>Misc2</designationHotKey>
     <researchPrerequisites>
@@ -123,7 +128,7 @@
   <!--STRONGER DOORS-->
   
   
-  
+
     <ThingDef ParentName="ContDoorBase">
     <defName>StrConDoor</defName>
     <label>strong containment door</label>
@@ -140,7 +145,7 @@
       <damageData>
         <!--  no damage marks because they don't move with the door
         <rect>(0,0.12,1,0.76)</rect>-->
-        <enabled>false</enabled>
+      <enabled>false</enabled>
       </damageData>
     </graphicData>
     <uiIconPath>Things/Building/Door/DoorSimple_MenuIcon</uiIconPath>
@@ -150,6 +155,9 @@
 	  <Plasteel>30</Plasteel>
 	  <Silver>50</Silver>
     </costList>
+	<comps>
+		<li Class="NuclearEnergy.CompProperties_Containment"/>
+	</comps>
     <designationHotKey>Misc1</designationHotKey>
 	<researchPrerequisites>
       <li>StrContWall</li>
@@ -172,7 +180,7 @@
       <damageData>
       <!--  no damage marks because they don't move with the door
         <rect>(0,0.12,1,0.76)</rect>-->
-        <enabled>false</enabled>
+       <enabled>false</enabled>
       </damageData>
     </graphicData>
     <uiIconPath>Things/Building/Door/Autodoor_MenuIcon</uiIconPath>
@@ -188,6 +196,8 @@
         <basePowerConsumption>50</basePowerConsumption>
       </li>
       <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Styleable" />
+	  <li Class="NuclearEnergy.CompProperties_Containment"/>
     </comps>
     <designationHotKey>Misc2</designationHotKey>
     <researchPrerequisites>
@@ -196,11 +206,11 @@
     </researchPrerequisites>
     <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
   </ThingDef>
-  
+ 
   
   <!--WEAKER WALLS-->
   
-    <ThingDef ParentName="BuildingBase" Name="ContainWall">
+   <!-- <ThingDef ParentName="BuildingBase" Name="ContainWall">
     <defName>ContainWall</defName>
     <label>containment wall</label>
     <description>An impassable wall. Capable of holding up a roof and withstanding a normal reactor explosion. Used for containing reactors in a chamber.</description>
@@ -266,11 +276,183 @@
 	<researchPrerequisites>
       <li>ContWall</li>
     </researchPrerequisites>
+  </ThingDef> -->
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>ContainWall</defName>
+    <label>containment wall</label>
+    <description>An impassable wall. Capable of holding up a roof and withstanding a normal reactor explosion. Used for containing reactors in a chamber.</description>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <replaceTags>
+      <li>Wall</li>
+    </replaceTags>
+    <graphicData>
+      <texPath>Things/Building/Linked/Wall</texPath>
+      <graphicClass>Graphic_Appearances</graphicClass>
+      <linkType>CornerFiller</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+      <color>(85,85,85)</color>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+        <edgeTop>Damage/Edge</edgeTop>
+        <edgeBot>Damage/Edge</edgeBot>
+        <edgeLeft>Damage/Edge</edgeLeft>
+        <edgeRight>Damage/Edge</edgeRight>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
+    <statBases>
+      <MaxHitPoints>1300</MaxHitPoints>
+      <WorkToBuild>1250</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    <costList>
+      <Steel>20</Steel>
+      <Plasteel>2</Plasteel>
+      <Silver>2</Silver>
+    </costList>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <coversFloor>true</coversFloor>
+    <drawStyleCategory>Walls</drawStyleCategory>
+    <tickerType>Never</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <holdsRoof>true</holdsRoof>
+    <designationCategory>Structure</designationCategory>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <blockLight>true</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <building>
+      <isWall>true</isWall>
+      <isPlaceOverableWall>true</isPlaceOverableWall>
+      <isInert>true</isInert>
+      <ai_chillDestination>false</ai_chillDestination>
+      <blueprintGraphicData>
+        <texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+      </blueprintGraphicData>
+    </building>
+    <damageMultipliers>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>2</multiplier>
+      </li>
+      <li>
+        <damageDef>Thump</damageDef>
+        <multiplier>2</multiplier>
+      </li>
+    </damageMultipliers>
+    <designationHotKey>Misc3</designationHotKey>
+    <researchPrerequisites>
+      <li>ContWall</li>
+    </researchPrerequisites>
+    <comps>
+      <li Class="NuclearEnergy.CompProperties_Containment"/>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>StrContainWall</defName>
+    <label>strong containment wall</label>
+    <description>An impassable wall. Capable of holding up a roof and withstanding a giant reactor explosion. Used for containing reactors in a chamber.</description>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <replaceTags>
+      <li>Wall</li>
+    </replaceTags>
+    <graphicData>
+      <texPath>Things/Building/Linked/Wall</texPath>
+      <graphicClass>Graphic_Appearances</graphicClass>
+      <linkType>CornerFiller</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+      <color>(45,45,85)</color>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+        <edgeTop>Damage/Edge</edgeTop>
+        <edgeBot>Damage/Edge</edgeBot>
+        <edgeLeft>Damage/Edge</edgeLeft>
+        <edgeRight>Damage/Edge</edgeRight>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
+    <statBases>
+      <MaxHitPoints>2800</MaxHitPoints>
+      <WorkToBuild>2500</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    <costList>
+      <Steel>40</Steel>
+      <Plasteel>5</Plasteel>
+      <Silver>5</Silver>
+    </costList>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <coversFloor>true</coversFloor>
+    <drawStyleCategory>Walls</drawStyleCategory>
+    <tickerType>Never</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <holdsRoof>true</holdsRoof>
+    <designationCategory>Structure</designationCategory>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <blockLight>true</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <building>
+      <isWall>true</isWall>
+      <isPlaceOverableWall>true</isPlaceOverableWall>
+      <isInert>true</isInert>
+      <ai_chillDestination>false</ai_chillDestination>
+      <blueprintGraphicData>
+        <texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+      </blueprintGraphicData>
+    </building>
+    <damageMultipliers>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>2</multiplier>
+      </li>
+      <li>
+        <damageDef>Thump</damageDef>
+        <multiplier>2</multiplier>
+      </li>
+    </damageMultipliers>
+    <designationHotKey>Misc3</designationHotKey>
+    <researchPrerequisites>
+      <li>StrContWall</li>
+    </researchPrerequisites>
+    <comps>
+      <li Class="NuclearEnergy.CompProperties_Containment"/>
+    </comps>
   </ThingDef>
   
   <!--STRONGER WALLS-->
   
-      <ThingDef ParentName="BuildingBase" Name="StrContainWall">
+    <!--  <ThingDef ParentName="BuildingBase" Name="StrContainWall">
     <defName>StrContainWall</defName>
     <label>strong containment wall</label>
     <description>An impassable wall. Capable of holding up a roof and withstanding a giant reactor explosion. Used for containing reactors in a chamber.</description>
@@ -336,7 +518,7 @@
 	<researchPrerequisites>
       <li>StrContWall</li>
     </researchPrerequisites>
-  </ThingDef>
+  </ThingDef> -->
   
 
 </Defs>
